@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Fly-By-Wireless - User Manual</title>
+    <meta property="og:image" content="">
+    <meta name="description" content="Use iPhone as joystick for flight simulation.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <link rel="stylesheet" href="assets/css/Article-Clean.css">
+    <link rel="stylesheet" href="assets/css/Article-Dual-Column.css">
+    <link rel="stylesheet" href="assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GG42BRWX1G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GG42BRWX1G');
+</script>
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md">
+        <div class="container-fluid"><a class="navbar-brand text-dark" href="index.html"><img src="assets/img/logo.png" style="height: 30px;margin-right: 10px;margin-bottom: 10px;">FLY-BY-WIRELESS</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div
+                class="collapse navbar-collapse d-md-flex d-lg-flex justify-content-md-end justify-content-lg-end" id="navcol-1">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="manual.html">Manual</a></li>
+                </ul>
+        </div>
+        </div>
+    </nav>
+    <div class="article-dual-column">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    <div class="intro" style="margin-bottom: 0;">
+                        <h1 class="text-center" style="margin-top: 0;margin-bottom: 0;padding-top: 0;">User Manual</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-10 col-lg-3 offset-md-1">
+                    <div class="toc">
+                        <p style="margin-bottom: 5px;">Table of Contents</p>
+                        <ul>
+                            <li><a href="#s-1">1. Setup Instruction</a> </li>
+                            <li><a href="#s-2">2. Normal Procedure</a></li>
+                            <li><a href="#s-3">3. Control Binding</a> </li>
+                            <li><a href="#s-4">4. App Interface &amp; Tips<br></a> </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-10 col-lg-7 offset-md-1 offset-lg-0">
+                    <p>Project Website:&nbsp;<a href="https://flybywireless.github.io">https://flybywireless.github.io</a></p>
+                    <div class="text">
+                        <p></p>
+                        <h4 id="s-1">1. Setup Instruction</h4>
+                        <h5 id="step-1">Step 1: Download the iOS app</h5>
+                        <h5></h5>
+                        <p>You can download the Fly-By-Wireless app from the apple app store. The app currently does not support android device.</p>
+                        <p><a href="https://apps.apple.com/app/fly-by-wireless/id1535325819"><img src="assets/img/appstore.svg"></a></p>
+                        <h5 id="step-2">Step 2: Download &amp; Install vJoy Device Driver</h5>
+                        <p>Fly-By-Wireless is powered by the opensource vJoy project. vJoy is a device driver that bridges the gap between any device that is not a joystick and an application that requires a joystick.&nbsp;The latest vJoy device driver is
+                            available for download from the link below, or you can go to the&nbsp;<a href="http://vjoystick.sourceforge.net/site/">official site</a>&nbsp;of the vJoy project for more versions.<br></p>
+                        <p><a href="downloads/vJoySetup.exe">Download vJoy Device Driver for Windows (x64)</a></p>
+                        <p>When the installer prompt with the Select Components option, make sure you select the vJoy Configuration application. Other companion applications is not required by Fly-By-Wireless.</p>
+                        <figure class="figure"><img class="figure-img" src="assets/img/vJoySelectComponents.png">
+                            <figcaption class="figure-caption">Figure 1. vJoy Installer - Select Components</figcaption>
+                        </figure>
+                        <h5 id="step-3">Step 3: Download &amp; Install Fly-By-Wireless Server</h5>
+                        <p>Fly-By-Wireless server is required to be installed on the PC you use to run flight simulator. The server application receives flight control commands from the Fly-By-Wireless app and feeds them to the vJoy Device Driver. The latest
+                            server is available for download from the link below.</p>
+                        <p><a href="downloads/FBWSetup.msi">Download Fly-By-Wireless Server for Windows (x64)<br></a></p>
+                        <h4 id="s-2">2. Normal Procedure</h4>
+                        <p>Fly-By-Wireless is easy to use. Before each flight, you only need to take less than a minute to get things to work.</p>
+                        <p>First, launch the Fly-By-Wireless server on your computer. Before enabling it, check if the server is configured correctly:</p>
+                        <ol>
+                            <li><strong>Server IP:&nbsp;</strong>The application automatically detects your computer's local IP address. If your computer has only one network interface, you don't need to anything. If your computer has multiple network interface,
+                                there can be multiple IPs. In this case, you may want to select IP address manually in the drop down menu. Make sure you select the IP address that correspond to the WLAN your phone connects to.</li>
+                            <li><strong>Server Port:&nbsp;</strong>The default port that the server listens on is 7773. If some other application is taking this port (The application will prompt with error in this case), you can manually change the port number
+                                to something else between 1000-65535.</li>
+                            <li><strong>vJoy Device</strong>: Select the vJoy device you want to use. The default device is #1, leave it unchanged unless you're doing some advanced configuration. If there's no device to select from in the drop down menu,
+                                make sure you have vJoy device driver correctly installed and refresh with&nbsp;<em>Main-Refresh vJoy Device List</em>.</li>
+                        </ol>
+                        <figure class="figure"><img class="img-fluid figure-img" src="assets/img/fbwServer.png">
+                            <figcaption class="figure-caption">Figure 2. Fly-By-Wireless Server Interface</figcaption>
+                        </figure>
+                        <p>Next, check&nbsp;<em>Enable</em>&nbsp;checkbox to start the server.&nbsp;After the server is enabled, start the app, enter the server's IP and port on the main screen, than tap the orange button to start.<br></p>
+                        <p></p>
+                        <figure class="figure"><img class="img-fluid figure-img" src="assets/img/networkConfig.png">
+                            <figcaption class="figure-caption">Figure 3. Network Configuration</figcaption>
+                        </figure>
+                        <p>Closing the server window will minimize the it to system tray. If you want to exit, right click the tray icon, or using the Main menu option when the window is showing.<br></p>
+                        <h4 id="s-3">3. Control Binding</h4>
+                        <p>The vJoy device is seen by Windows as a standard joystick device. Use the&nbsp;<em>Configure vJoy</em>&nbsp;companion app you installed when in Section 1 - Step 2 to configure the number of&nbsp;axes, sliders, buttons, and POVs
+                            the vJoy device have. As a minimum requirement, the current version of Fly-By-Wireless uses 3 Axis&nbsp;(X, Y, Z)&nbsp;, a Slider (Slider), 8 Buttons, and a 4-direction POV. When configuring your primary vJoy device, make sure
+                            the minimum requirement is met.</p>
+                        <figure class="figure"><img class="img-fluid figure-img" src="assets/img/vJoyConf.png">
+                            <figcaption class="figure-caption d-lg-flex justify-content-lg-center">Figure 4. Example of minimum vJoy configuration</figcaption>
+                        </figure>
+                        <p>Just like using a physical joystick, you also need to bind the joystick's control input to flight simulation events. We provided some examples of control bindings, but you're always free to make your own.<br></p>
+                        <h5 id="mfs">Example Profile: Microsoft Flight Simulator</h5>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>In-App Control</th>
+                                        <th>Input</th>
+                                        <th>Binding</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Device Tilt (Leftward/Rightward)</td>
+                                        <td>Joystick L - Axis X</td>
+                                        <td>Aileron Axis</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Device Tilt (Forward/Backward)<br></td>
+                                        <td>Joystick L - Axis Y</td>
+                                        <td>Elevator Axis</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Left Slider</td>
+                                        <td>Joystick L - Axis Z</td>
+                                        <td>Rudder Axis</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Right Slider</td>
+                                        <td>Joystick Slider X</td>
+                                        <td>Throttle Axis</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Button 1</td>
+                                        <td>1</td>
+                                        <td>Brakes</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Button 2</td>
+                                        <td>2</td>
+                                        <td>Toggle Smart Camera</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Button 3</td>
+                                        <td>3</td>
+                                        <td>Toggle Throttle Reverse Thrust</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Button 4</td>
+                                        <td>4</td>
+                                        <td>Toggle Landing Gear</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Button 5</td>
+                                        <td>5</td>
+                                        <td>Elevator Trim Down (Nose Down)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Button 6</td>
+                                        <td>6</td>
+                                        <td>Elevator Trim Up (Nose Up)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Button 7</td>
+                                        <td>7</td>
+                                        <td>Decrease Flaps</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Button 8</td>
+                                        <td>8</td>
+                                        <td>Increase Flaps</td>
+                                    </tr>
+                                    <tr>
+                                        <td>POV Left</td>
+                                        <td>POV Left</td>
+                                        <td>Cockpit Quickview Left &amp; External Quickview Left</td>
+                                    </tr>
+                                    <tr>
+                                        <td>POV Right</td>
+                                        <td>POV Right</td>
+                                        <td>Cockpit Quickview Right &amp; External Quickview Right<br></td>
+                                    </tr>
+                                    <tr>
+                                        <td>POV Up</td>
+                                        <td>POV Up</td>
+                                        <td>Cockpit Quickview Up &amp; External Quickview Top<br></td>
+                                    </tr>
+                                    <tr>
+                                        <td>POV Down</td>
+                                        <td>POV Down</td>
+                                        <td>Cockpit Quickview Rear &amp; External Quickview Rear<br></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h5 id="xp">Example Profile: X-Plane 11</h5>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>In-App Control</th>
+                                        <th>Input</th>
+                                        <th>Binding</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Device Tilt&nbsp;<br>(Leftward/Rightward)<br></td>
+                                        <td>Axis 0</td>
+                                        <td>Roll</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Device Tilt<br>(Forward/Backward)<br></td>
+                                        <td>Axis 1</td>
+                                        <td>Pitch</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Right Slider</td>
+                                        <td>Axis 2</td>
+                                        <td>Yaw</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Left Slider</td>
+                                        <td>Axis 3</td>
+                                        <td>Throttle</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Button 1</td>
+                                        <td>Btn 0</td>
+                                        <td>Hold brakes regular</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Button 2</td>
+                                        <td>Btn 1</td>
+                                        <td>Default view</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Button 3</td>
+                                        <td>Btn 2</td>
+                                        <td>Toggle thrust reversers</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Button 4</td>
+                                        <td>Btn 3</td>
+                                        <td>Landing gear toggle</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Button 5</td>
+                                        <td>Btn 4</td>
+                                        <td>Pitch trim down</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Button 6</td>
+                                        <td>Btn 5</td>
+                                        <td>Pitch trim up</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Button 7</td>
+                                        <td>Btn 6</td>
+                                        <td>Flaps up a notch</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Button 8</td>
+                                        <td>Btn 7</td>
+                                        <td>Flaps down a notch</td>
+                                    </tr>
+                                    <tr>
+                                        <td>POV Left</td>
+                                        <td>Hat Switch 0 - Left</td>
+                                        <td>Hat switch left</td>
+                                    </tr>
+                                    <tr>
+                                        <td>POV Right</td>
+                                        <td>Hat Switch 0 - Right<br></td>
+                                        <td>Hat switch right<br></td>
+                                    </tr>
+                                    <tr>
+                                        <td>POV Up</td>
+                                        <td>Hat Switch 0 - Up<br></td>
+                                        <td>Hat switch up<br></td>
+                                    </tr>
+                                    <tr>
+                                        <td>POV Down</td>
+                                        <td>Hat Switch 0 - Down<br></td>
+                                        <td>Hat switch down<br></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div><small class="form-text text-muted" style="padding-bottom: 15px;">Note: When asked to center all controls during calibration, place your phone down on a hard surface and tap calibrate on the app, this will center all controls.</small>
+                        <h4
+                            id="s-4">4. App Interface &amp; Tips<br></h4>
+                            <p></p>
+                    </div>
+                    <figure class="figure"><img class="img-fluid figure-img" src="assets/img/interface.png">
+                        <figcaption class="figure-caption d-md-flex justify-content-md-center">Figure 5. App Interface</figcaption>
+                    </figure>
+                    <ol>
+                        <li><strong>Navigation Bar:<br></strong>You can access User Manual and Settings from the navigation bar.</li>
+                        <li><strong>Network &amp; Enable Button:<br></strong>IP &amp; port box is where you input server address; The big button below is the switch that toggles network functionality.</li>
+                        <li><strong>Control Visualizer:<br></strong>The X, Y, Z axis inputs are visualized in this area, tap the yoke in the middle can disable/enable motion sensor (X/Y axis).</li>
+                        <li><strong>Left Buttons:<br></strong>Button 1, 3, 5, 6.</li>
+                        <li><strong>Right Buttons &amp; POV:<br></strong>Button 2, 4, 7, 8, and 4-way POV.</li>
+                        <li><strong>Sliders &amp; Calibration Button:<br></strong>The left slider controls the first slider of the vJoy device; The right slider controls the Z-axis of the vJoy device. The right slider is intended to be used for rudder control,
+                            which automatically centers when no input is provided; Tap calibration button in the middle to center X/Y axis with current device attitude.</li>
+                    </ol>
+                    <h5>Tips</h5>
+                    <ul>
+                        <li>During a long flight, if you're tired of holding your device, tap the yoke icon in the center of the app to temporary disable the X/Y axis. The current elevator and aileron input will hold until you tap again to re-enable the X/Y
+                            axis. The device will automatically calibrate to make sure the input is continuous.</li>
+                        <li>You can adjust axis sensitivity in the settings. Generally, use higher sensitivity for X (roll) axis and lower sensitivity for Y (pitch) axis can make adjustment during a landing easier.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-basic">
+        <footer>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="terms.html">Terms &amp; Conditoins</a></li>
+                <li class="list-inline-item"><a href="privacy.html">Privacy Policy</a></li>
+                <li class="list-inline-item"><a href="mailto:flybywirelessapp@gmail.com">Contact Us</a></li>
+            </ul>
+            <p class="copyright">Fly-By-Wireless © 2020</p>
+        </footer>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

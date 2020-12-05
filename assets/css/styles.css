@@ -1,0 +1,110 @@
+#promo .jumbotron {
+  border-radius: 30px;
+  max-width: 800px;
+  margin: auto;
+  background-color: rgba(255,255,255,0.5);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #777;
+  text-align: left;
+  background-color: #fff;
+}
+
+@media (max-width: 576px) {
+  .jumbotron h1 {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 576px) {
+  .jumbotron h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .jumbotron p {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 768px) {
+  .jumbotron p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  #promo {
+    padding: 10px;
+  }
+}
+
+#promo {
+  text-align: center;
+  padding: 40px;
+  background: url(../../assets/img/bg.png) no-repeat;
+  background-size: cover;
+}
+
+.step-text {
+  margin: auto;
+}
+
+.download-button {
+  width: 120px;
+}
+
+.step-heading {
+  margin: auto;
+}
+
+.download-button {
+  border-radius: 5px;
+}
+
+@media (max-width: 576px) {
+  .step-heading {
+    font-size: 18px;
+  }
+}
+
+.col-3.step-number {
+  margin: auto;
+}
+
+.row.step-section {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+#logo {
+  max-height: 36px;
+  margin-bottom: 10px;
+}
+
+#deviceart {
+  width: 80%;
+}
+
+@media (min-width: 768px) {
+  .step-heading {
+    font-size: 27px;
+  }
+}
+
+@media (max-width: 768px) {
+  .step-heading {
+    font-size: 22px;
+  }
+}
+
