@@ -54,9 +54,8 @@
                         <p style="margin-bottom: 5px;">Table of Contents</p>
                         <ul>
                             <li><a href="#s-1">1. Setup Instruction</a> </li>
-                            <li><a href="#s-2">2. Normal Procedure</a></li>
-                            <li><a href="#s-3">3. Control Binding</a> </li>
-                            <li><a href="#s-4">4. App Interface &amp; Tips<br></a> </li>
+                            <li><a href="#s-2">2. Go Flying!</a></li>
+                            <li><a href="#s-3">3. Control Binding Examples</a> </li>
                         </ul>
                     </div>
                 </div>
@@ -64,52 +63,58 @@
                     <p>Project Website:&nbsp;<a href="https://flybywireless.github.io">https://flybywireless.github.io</a></p>
                     <div class="text">
                         <p></p>
-                        <h4 id="s-1">1. Setup Instruction</h4>
+                        <h4 id="s-1"><strong>I. Setup Instruction</strong></h4>
                         <h5 id="step-1">Step 1: Download the iOS app</h5>
                         <h5></h5>
-                        <p>You can download the Fly-By-Wireless app from the apple app store. The app currently does not support android device.</p>
                         <p><a href="https://apps.apple.com/app/fly-by-wireless/id1535325819"><img src="assets/img/appstore.svg"></a></p>
                         <h5 id="step-2">Step 2: Download &amp; Install vJoy Device Driver</h5>
-                        <p>Fly-By-Wireless is powered by the opensource vJoy project. vJoy is a device driver that bridges the gap between any device that is not a joystick and an application that requires a joystick.&nbsp;The latest vJoy device driver is
-                            available for download from the link below, or you can go to the&nbsp;<a href="http://vjoystick.sourceforge.net/site/">official site</a>&nbsp;of the vJoy project for more versions.<br></p>
                         <p><a href="downloads/vJoySetup.exe">Download vJoy Device Driver for Windows (x64)</a></p>
-                        <p>When the installer prompt with the Select Components option, make sure you select the vJoy Configuration application. Other companion applications is not required by Fly-By-Wireless.</p>
+                        <p>Make sure you select the <strong>vJoy Configuration</strong> <strong>application </strong>when installer prompt you to select components. Other companion applications are not required by FBW.</p>
                         <figure class="figure"><img class="figure-img" src="assets/img/vJoySelectComponents.png">
                             <figcaption class="figure-caption">Figure 1. vJoy Installer - Select Components</figcaption>
                         </figure>
-                        <h5 id="step-3">Step 3: Download &amp; Install Fly-By-Wireless Server</h5>
-                        <p>Fly-By-Wireless server is required to be installed on the PC you use to run flight simulator. The server application receives flight control commands from the Fly-By-Wireless app and feeds them to the vJoy Device Driver. The latest
-                            server is available for download from the link below.</p>
-                        <p><a href="downloads/FBWSetup.msi">Download Fly-By-Wireless Server for Windows (x64)<br></a></p>
-                        <h4 id="s-2">2. Normal Procedure</h4>
-                        <p>Fly-By-Wireless is easy to use. Before each flight, you only need to take less than a minute to get things to work.</p>
-                        <p>First, launch the Fly-By-Wireless server on your computer. Before enabling it, check if the server is configured correctly:</p>
-                        <ol>
-                            <li><strong>Server IP:&nbsp;</strong>The application automatically detects your computer's local IP address. If your computer has only one network interface, you don't need to anything. If your computer has multiple network interface,
-                                there can be multiple IPs. In this case, you may want to select IP address manually in the drop down menu. Make sure you select the IP address that correspond to the WLAN your phone connects to.</li>
-                            <li><strong>Server Port:&nbsp;</strong>The default port that the server listens on is 7773. If some other application is taking this port (The application will prompt with error in this case), you can manually change the port number
-                                to something else between 1000-65535.</li>
-                            <li><strong>vJoy Device</strong>: Select the vJoy device you want to use. The default device is #1, leave it unchanged unless you're doing some advanced configuration. If there's no device to select from in the drop down menu,
-                                make sure you have vJoy device driver correctly installed and refresh with&nbsp;<em>Main-Refresh vJoy Device List</em>.</li>
-                        </ol>
-                        <figure class="figure"><img class="img-fluid figure-img" src="assets/img/fbwServer.png">
-                            <figcaption class="figure-caption">Figure 2. Fly-By-Wireless Server Interface</figcaption>
+                        <h5 id="step-3">Step 3: Download &amp; Install FBW Server</h5>
+                        <p><a href="downloads/FBWSetup.msi">Download FBW&nbsp;Server (V1.1) for Windows (x64)<br></a></p>
+                        <h5 id="step-4">Step 4: Configure vJoy Device</h5>
+                        <p>Use <strong>Configure vJoy</strong>&nbsp;application installed in Step 2 to configure vJoy Device. Make sure to enable<strong> </strong><span style="text-decoration: underline;">X/Y/Z/Slider</span>&nbsp;Axes, set Number of Buttons
+                            to&nbsp;<strong>at least 10</strong>, and configure <strong>exactly one&nbsp;</strong><span style="text-decoration: underline;">4 Directions</span> POV Hat Switch<strong>, </strong>as shown in the figure below.</p>
+                        <figure class="figure"><img class="img-fluid figure-img" src="assets/img/vJoyConf.png">
+                            <figcaption class="figure-caption d-lg-flex justify-content-lg-center">Figure 2. Example of vJoy Configuration</figcaption>
                         </figure>
-                        <p>Next, check&nbsp;<em>Enable</em>&nbsp;checkbox to start the server.&nbsp;After the server is enabled, start the app, enter the server's IP and port on the main screen, than tap the orange button to start.<br></p>
+                        <h5 id="step-5">Step 5: Bind Controls</h5>
+                        <p>Bind control input to game events just like what you would do with a physical joystick device. Examples are provided in Section III.<br></p>
+                        <figure class="figure"><img class="img-fluid figure-img" src="assets/img/mfs.png">
+                            <figcaption class="figure-caption">Figure 3. Example Microsoft Flight Simulator Configuration</figcaption>
+                        </figure>
+                        <figure class="figure"><img class="img-fluid figure-img" src="assets/img/xp11.png">
+                            <figcaption class="figure-caption">Figure 4.&nbsp; Example X-Plane 11 Configuration</figcaption>
+                        </figure>
+                        <p>In X-Plane 11, when asked to center all controls during calibration, place your phone down on a level surface and tap <strong><span style="text-decoration: underline;">Calibrate</span>&nbsp;</strong>button in the app to center
+                            all controls.<br></p>
+                        <h4 id="s-2"><strong>II. Go Flying!</strong></h4>
+                        <p>Launch the FBW server on your computer and check a few things on the main screen:</p>
+                        <ol>
+                            <li><strong>Server IP:&nbsp;</strong>The application automatically detects your computer's local IP address. If your computer has only one network interface, you don't need to anything. If your computer has multiple network interface
+                                you may want to select IP address manually from the drop down menu to match the interface used for WLAN connection.</li>
+                            <li><strong>Server Port:&nbsp;</strong>The default port that the server listens on is 7773. If default port is taken by another application, you can manually set the port number to something else (1000-65535).</li>
+                            <li><strong>vJoy Device</strong>: Select the vJoy device you want to use. The default device is #1, leave it unchanged unless you're doing some advanced configuration. If there's no device to select from in the drop down menu,
+                                make sure you have vJoy device driver correctly installed and refresh with&nbsp;<span style="text-decoration: underline;">Main-Refresh vJoy Device List</span>.</li>
+                        </ol>
+                        <p>If configured alright, check&nbsp;<strong><span style="text-decoration: underline;">Enable</span></strong>, and copy enter <strong><span style="text-decoration: underline;">IP</span> </strong>and <strong><span style="text-decoration: underline;">Port</span>&nbsp;</strong>into
+                            the app. Tap the BIG blue button and you'll have full control!<br></p>
                         <p></p>
                         <figure class="figure"><img class="img-fluid figure-img" src="assets/img/networkConfig.png">
-                            <figcaption class="figure-caption">Figure 3. Network Configuration</figcaption>
+                            <figcaption class="figure-caption">Figure 5. Network Configuration</figcaption>
                         </figure>
-                        <p>Closing the server window will minimize the it to system tray. If you want to exit, right click the tray icon, or using the Main menu option when the window is showing.<br></p>
-                        <h4 id="s-3">3. Control Binding</h4>
-                        <p>The vJoy device is seen by Windows as a standard joystick device. Use the&nbsp;<em>Configure vJoy</em>&nbsp;companion app you installed when in Section 1 - Step 2 to configure the number of&nbsp;axes, sliders, buttons, and POVs
-                            the vJoy device have. As a minimum requirement, the current version of Fly-By-Wireless uses 3 Axis&nbsp;(X, Y, Z)&nbsp;, a Slider (Slider), 8 Buttons, and a 4-direction POV. When configuring your primary vJoy device, make sure
-                            the minimum requirement is met.</p>
-                        <figure class="figure"><img class="img-fluid figure-img" src="assets/img/vJoyConf.png">
-                            <figcaption class="figure-caption d-lg-flex justify-content-lg-center">Figure 4. Example of minimum vJoy configuration</figcaption>
-                        </figure>
-                        <p>Just like using a physical joystick, you also need to bind the joystick's control input to flight simulation events. We provided some examples of control bindings, but you're always free to make your own.<br></p>
-                        <h5 id="mfs">Example Profile: Microsoft Flight Simulator</h5>
+                        <p>Closing the server window will minimize FBW server to system tray. If you want to exit the application, right click the tray icon, or using the menu bar&nbsp;<strong><span style="text-decoration: underline;">Main-Quit</span></strong>.<br></p>
+                        <h5>Tips</h5>
+                        <ul>
+                            <li>If you're tired of holding your device during cruise, tap the yoke icon in the center of the app to temporary disable the X/Y input. FBW will hold your current X/Y input until you tap again to re-enable. Y axis will automatically
+                                calibrate to make sure the input is continuous.</li>
+                            <li>You can adjust axis sensitivity in the settings. Generally, use higher sensitivity for X (roll) axis and lower sensitivity for Y (pitch) axis can make adjustment during a landing easier.</li>
+                        </ul>
+                        <h4 id="s-3"><strong>III. Control Binding Examples</strong></h4>
+                        <h5 id="mfs">Example 1: Microsoft Flight Simulator (2020)</h5>
                         <div class="table-responsive">
                             <table class="table">
                                 <thead>
@@ -153,22 +158,22 @@
                                     <tr>
                                         <td>Button 3</td>
                                         <td>3</td>
-                                        <td>Toggle Throttle Reverse Thrust</td>
+                                        <td>Toggle Autopilot Master</td>
                                     </tr>
                                     <tr>
                                         <td>Button 4</td>
                                         <td>4</td>
-                                        <td>Toggle Landing Gear</td>
+                                        <td>Toggle Throttle Reverse Thrust</td>
                                     </tr>
                                     <tr>
                                         <td>Button 5</td>
                                         <td>5</td>
-                                        <td>Elevator Trim Down (Nose Down)</td>
+                                        <td>Retract Spoilers</td>
                                     </tr>
                                     <tr>
                                         <td>Button 6</td>
                                         <td>6</td>
-                                        <td>Elevator Trim Up (Nose Up)</td>
+                                        <td>Extend Spoilers</td>
                                     </tr>
                                     <tr>
                                         <td>Button 7</td>
@@ -179,6 +184,16 @@
                                         <td>Button 8</td>
                                         <td>8</td>
                                         <td>Increase Flaps</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Button 9</td>
+                                        <td>9</td>
+                                        <td>Toggle Parking Brakes</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Button 10</td>
+                                        <td>10</td>
+                                        <td>Toggle Landing Gear</td>
                                     </tr>
                                     <tr>
                                         <td>POV Left</td>
@@ -203,7 +218,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <h5 id="xp">Example Profile: X-Plane 11</h5>
+                        <h5 id="xp">Example 2: X-Plane 11</h5>
                         <div class="table-responsive">
                             <table class="table">
                                 <thead>
@@ -247,22 +262,22 @@
                                     <tr>
                                         <td>Button 3</td>
                                         <td>Btn 2</td>
-                                        <td>Toggle thrust reversers</td>
+                                        <td>Toggle servos</td>
                                     </tr>
                                     <tr>
                                         <td>Button 4</td>
                                         <td>Btn 3</td>
-                                        <td>Landing gear toggle</td>
+                                        <td>Toggle thrust reversers</td>
                                     </tr>
                                     <tr>
                                         <td>Button 5</td>
                                         <td>Btn 4</td>
-                                        <td>Pitch trim down</td>
+                                        <td>Speedbrakes retract one</td>
                                     </tr>
                                     <tr>
                                         <td>Button 6</td>
                                         <td>Btn 5</td>
-                                        <td>Pitch trim up</td>
+                                        <td>Speedbrakes extend one</td>
                                     </tr>
                                     <tr>
                                         <td>Button 7</td>
@@ -273,6 +288,16 @@
                                         <td>Button 8</td>
                                         <td>Btn 7</td>
                                         <td>Flaps down a notch</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Button 9</td>
+                                        <td>Btn 8</td>
+                                        <td>Toggle brakes regular effort</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Button 10</td>
+                                        <td>Btn 9</td>
+                                        <td>Landing gear toggle</td>
                                     </tr>
                                     <tr>
                                         <td>POV Left</td>
@@ -296,29 +321,8 @@
                                     </tr>
                                 </tbody>
                             </table>
-                        </div><small class="form-text text-muted" style="padding-bottom: 15px;">Note: When asked to center all controls during calibration, place your phone down on a hard surface and tap calibrate on the app, this will center all controls.</small>
-                        <h4
-                            id="s-4">4. App Interface &amp; Tips<br></h4>
-                            <p></p>
+                        </div>
                     </div>
-                    <figure class="figure"><img class="img-fluid figure-img" src="assets/img/interface.png">
-                        <figcaption class="figure-caption d-md-flex justify-content-md-center">Figure 5. App Interface</figcaption>
-                    </figure>
-                    <ol>
-                        <li><strong>Navigation Bar:<br></strong>You can access User Manual and Settings from the navigation bar.</li>
-                        <li><strong>Network &amp; Enable Button:<br></strong>IP &amp; port box is where you input server address; The big button below is the switch that toggles network functionality.</li>
-                        <li><strong>Control Visualizer:<br></strong>The X, Y, Z axis inputs are visualized in this area, tap the yoke in the middle can disable/enable motion sensor (X/Y axis).</li>
-                        <li><strong>Left Buttons:<br></strong>Button 1, 3, 5, 6.</li>
-                        <li><strong>Right Buttons &amp; POV:<br></strong>Button 2, 4, 7, 8, and 4-way POV.</li>
-                        <li><strong>Sliders &amp; Calibration Button:<br></strong>The left slider controls the first slider of the vJoy device; The right slider controls the Z-axis of the vJoy device. The right slider is intended to be used for rudder control,
-                            which automatically centers when no input is provided; Tap calibration button in the middle to center X/Y axis with current device attitude.</li>
-                    </ol>
-                    <h5>Tips</h5>
-                    <ul>
-                        <li>During a long flight, if you're tired of holding your device, tap the yoke icon in the center of the app to temporary disable the X/Y axis. The current elevator and aileron input will hold until you tap again to re-enable the X/Y
-                            axis. The device will automatically calibrate to make sure the input is continuous.</li>
-                        <li>You can adjust axis sensitivity in the settings. Generally, use higher sensitivity for X (roll) axis and lower sensitivity for Y (pitch) axis can make adjustment during a landing easier.</li>
-                    </ul>
                 </div>
             </div>
         </div>
